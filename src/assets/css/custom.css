@@ -1,0 +1,9 @@
+.container.general-wrapper {
+    min-height: calc(100vh - 112px);
+}
+footer.blue.font-small.page-footer {
+    background: rgba(0,123,255,.5);
+}
+section.container.wrapper-cards {
+
+}
