@@ -49,7 +49,7 @@ export default class Home extends Component {
             <section className="container wrapper-cards">
                 <div className="row">
                     <div className="col-sm-12 title">
-                        <h1>Propertys</h1>
+                        <h1>Propiedades inmobiliarias</h1>
                     </div>
                     <div className="col-sm-12">
                         {!loading &&
