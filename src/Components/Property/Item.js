@@ -23,6 +23,14 @@ export default class Footer extends Component {
             <h5 className='card-title'>
               Propietario {property.name} {property.lastname}
             </h5>
+            <h4 className='subtitle-card'>Datos del propietario:</h4>
+            <div>
+              <b>Email:</b> {property.email}
+            </div>
+            <div>
+              <b>Télefono:</b> {property.phone}
+            </div>
+            <hr />
             <p className='card-text'>Dirección propiedad: {property.address}</p>
 
             <h5 className='card-title price'>
