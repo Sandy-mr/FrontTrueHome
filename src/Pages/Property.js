@@ -22,7 +22,7 @@ export default class Property extends Component {
     this.loadPropertys()
   }
   loadPropertys = () => {
-    const url = `${api_url}propertys/${this.props.match.params.id}`
+    const url = api_url + 'propertys/' + this.props.match.params.id
     console.log('loading property')
     this.setState({
       loading: true,
@@ -105,12 +105,9 @@ export default class Property extends Component {
       propertyEmail,
       propertyPhone,
       propertyAddress,
-      propertyPrice,
-      error,
-      message
+      propertyPrice
     } = this.state
-    console.log(error)
-    console.log(message)
+
     return (
       <div>
         <div
@@ -123,7 +120,7 @@ export default class Property extends Component {
         </div>
         <div className='row'>
           <div className='col-8 wrapper-form'>
-            {!loading && (
+            {!loading && property && (
               <form onSubmit={this.handlSubmit}>
                 <div className='form-row'>
                   <div className='form-group col-md-6'>
