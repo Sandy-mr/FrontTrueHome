@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Home from '../../assets/images/home.jpg'
 
 export default class Footer extends Component {
   setFormat = price => {
@@ -16,23 +17,20 @@ export default class Footer extends Component {
       <div className='col-sm-4 property-item'>
         <div className='card'>
           <div>
-            <img
-              className='card-img-top'
-              src='//via.placeholder.com/400x180'
-              alt='Card cap'
-            />
+            <img className='card-img-top' src={Home} alt='Card cap' />
           </div>
           <div className='card-body'>
             <h5 className='card-title'>
               Propietario {property.name} {property.lastname}
             </h5>
             <p className='card-text'>Dirección propiedad: {property.address}</p>
-            <Link to={'/propertys/' + property._id} className='btn btn-primary'>
-              Editar
-            </Link>
+
             <h5 className='card-title price'>
               Precio: $ {this.setFormat(property.price)}
             </h5>
+            <Link to={'/propertys/' + property._id} className='btn btn-primary'>
+              Editar
+            </Link>
           </div>
         </div>
       </div>
