@@ -13,7 +13,7 @@ export default class Property extends Component {
     propertyEmail: '',
     propertyPhone: '',
     propertyAddress: '',
-    propertyPrice: null,
+    propertyPrice: '',
     message: '',
     redirect: false
   }
@@ -50,18 +50,23 @@ export default class Property extends Component {
       })
   }
   onChangeInput = e => {
-    if (e.target.name === 'propertyPrice') {
+    console.log(e.target.value)
+    /* if (e.target.name === 'propertyPrice') {
       let number = Number(e.target.value)
       console.log(typeof number)
       this.setState({ [e.target.name]: [number] })
     } else {
       this.setState({ [e.target.name]: [e.target.value] })
-    }
+    } */
+    this.setState({ [e.target.name]: [e.target.value] })
   }
 
   handlSubmit = e => {
     e.preventDefault()
 
+    console.log(this.state)
+
+    debugger
     const API_UPDATE = `${api_url}propertys/${this.props.match.params.id}`
 
     fetch(API_UPDATE, {
@@ -75,7 +80,7 @@ export default class Property extends Component {
         email: this.state.propertyEmail,
         phone: this.state.propertyPhone,
         address: this.state.propertyAddress,
-        price: this.state.propertyPrice[0]
+        price: this.state.propertyPrice
       })
     })
       .then(response => response.json())
@@ -107,7 +112,7 @@ export default class Property extends Component {
       propertyAddress,
       propertyPrice
     } = this.state
-
+    console.log(property)
     return (
       <div>
         <div
