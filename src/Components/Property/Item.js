@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { api_url } from '../../utils/Url'
+import { Link } from 'react-router-dom'
 
 export default class Footer extends Component {
   setFormat = price => {
@@ -27,9 +27,9 @@ export default class Footer extends Component {
               Propietario {property.name} {property.lastname}
             </h5>
             <p className='card-text'>Dirección propiedad: {property.address}</p>
-            <a href={'/propertys/' + property._id} className='btn btn-primary'>
+            <Link to={'/propertys/' + property._id} className='btn btn-primary'>
               Editar
-            </a>
+            </Link>
             <h5 className='card-title price'>
               Precio: $ {this.setFormat(property.price)}
             </h5>
