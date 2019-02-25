@@ -31,7 +31,13 @@ h5.card-title.price {
 }
 h1.title-view-form {
   font-size: 4em;
+  text-align: center;
 }
 .property-item {
   margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  h1.title-view-form {
+    font-size: 2em;
+  }
 }
