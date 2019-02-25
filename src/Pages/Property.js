@@ -66,7 +66,6 @@ export default class Property extends Component {
 
     console.log(this.state)
 
-    debugger
     const API_UPDATE = `${api_url}propertys/${this.props.match.params.id}`
 
     fetch(API_UPDATE, {
